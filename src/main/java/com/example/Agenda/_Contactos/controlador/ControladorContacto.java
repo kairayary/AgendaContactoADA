@@ -28,10 +28,10 @@ public class ControladorContacto {
         return "index";
     }
 
-    @GetMapping("/nuevo")
+    @GetMapping("/registro")
     public String mostrarFormRegistro(Model modelo) {
         modelo.addAttribute("contacto", new Contacto());
-        return "nuevo";
+        return "registro";
     }
 
     @PostMapping("/save")
@@ -40,7 +40,7 @@ public class ControladorContacto {
 
         if(bindingResult.hasErrors()) {
             modelo.addAttribute("contacto", contacto);
-            return "nuevo";
+            return "registro";
         }
 
         contactoServicio.RegistrarContacto(contacto);
