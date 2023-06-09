@@ -55,7 +55,7 @@
 
                 <div class="mb-3">
                     <label for="email">Email </label><i class="bi bi-envelope-at"></i> <input id="email" type="email"
-                                                               placeholder="Ingrese su correo electrónico " th:field="*{email}" class="form-control shadow-lg p-3 mb-5 bg-body-tertiary rounded" th:errorClass="is-invalid">
+                                                               placeholder="Ingrese su correo electrónico " th:field="*{email}" class="form-control shadow-lg p-3 mb-5 bg-body-tertiary rounded " th:errorClass="is-invalid">
 
                     <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="invalid-feedback"></div>
 
@@ -71,7 +71,7 @@
 
                 <div class="text-end">
                     <button class="btn btn-outline-success"><i class="fas fa-save"></i>&nbsp;Guardar</button>
-                    <a href="/" class="btn btn-outline-dark"><i class="fas fa-backward"></i>&nbsp;Cancelar </a>
+                    <a href="/" class="btn btn-outline-danger"><i class="fas fa-backward"></i>&nbsp;Cancelar </a>
                 </div>
 
             </form>
